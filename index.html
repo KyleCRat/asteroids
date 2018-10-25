@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Astroids</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script src="js/style.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<aside>
+		<form class="pure-form">
+		<div><h3>Starting Astroids</h3><input class="bar" type="text" id="startingAstroids" placeholder="3"
+								onblur="if (this.value == '') {this.value = '3';}"
+ 								onfocus="if (this.value == '3') {this.value = '';}" /></div>
+
+ 		<div><h3>Astroid Speed Multiplier</h3><input class="bar" type="text" id="astroidSpeed" placeholder="3"
+								onblur="if (this.value == '') {this.value = '3';}"
+ 								onfocus="if (this.value == '3') {this.value = '';}" /></div>
+
+ 		<div><h3>Extra Astroid Chance</h3><input class="bar" type="text" id="extraAstroid" placeholder="25"
+								onblur="if (this.value == '') {this.value = '25';}"
+ 								onfocus="if (this.value == '25') {this.value = '';}" /></div>
+
+		<div><h3>Fire Rate</h3><input class="bar" type="text" id="fireRate" placeholder="333"
+								onblur="if (this.value == '') {this.value = '333';}"
+ 								onfocus="if (this.value == '333') {this.value = '';}" /></div>
+
+ 		<div><h3>Acceleration Rate</h3><input class="bar" type="text" id="accRate" placeholder="0.025"
+								onblur="if (this.value == '') {this.value = '0.025';}"
+ 								onfocus="if (this.value == '0.025') {this.value = '';}" /></div>
+
+ 		<div><h3>Decelleration Rate</h3><input class="bar" type="text" id="deaccRate" placeholder="-0.015"
+								onblur="if (this.value == '') {this.value = '-0.015';}"
+ 								onfocus="if (this.value == '-0.015') {this.value = '';}" /></div>
+
+ 		<div><h3>Turn Speed</h3><input class="bar" type="text" id="turnSpeed" placeholder="2"
+								onblur="if (this.value == '') {this.value = '2';}"
+ 								onfocus="if (this.value == '2') {this.value = '';}" /></div>
+
+		<div><input type="button" value="START NEW GAME" id="startButton" class="btn" onclick="startGame();"></div>
+
+		</form> 
+		<div id="asideNav"></div>
+		<div unselectable="on" class="noSelect" id="asideText"><h3>SETTINGS CLICK HERE</h3></div>
+	</aside>
+
+	<canvas id="canvas" width="900" height="600"></canvas>
+	<div id="textScreen" class="noSelect"><h1 class="noSelect">YOU WIN!</h1><br></div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
